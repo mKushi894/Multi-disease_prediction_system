@@ -72,6 +72,8 @@ def ask(client, history, user_msg, context=None):
                     time.sleep(1.2)
                     continue
                 break
+        if "RESOURCE_EXHAUSTED" in str(last_err) or "quota" in str(last_err).lower():
+            return "The AI assistant has reached its daily usage limit. Please try again later."
         return f"Assistant error: {last_err}"
     except Exception as e:
         return f"Assistant error: {e}"
