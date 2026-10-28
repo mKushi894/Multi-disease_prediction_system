@@ -255,12 +255,6 @@ def predict_disease(disease: str, user_input: Dict[str, Any]) -> Dict[str, Any]:
             "model_metrics": metadata
         }
 
-        try:
-            from src.chatbot.api_server import set_active_context
-            set_active_context(disease, res_payload, clean_user_inputs)
-        except Exception:
-            pass
-
         return res_payload
 
     except Exception as e:

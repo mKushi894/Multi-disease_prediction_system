@@ -576,6 +576,8 @@ def render_prediction_result(res: Dict[str, Any]):
                     "contribution": "Risk impact (pp)",
                 }
             )
+            # Mixed str/number values in one column break Arrow serialization on Cloud.
+            df["Patient value"] = df["Patient value"].astype(str)
             st.dataframe(df, width="stretch", hide_index=True)
             try:
                 chart_df = df.set_index("Factor")[["Risk impact (pp)"]]

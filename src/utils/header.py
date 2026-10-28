@@ -50,24 +50,5 @@ def render_header(page_key: str = "home"):
                 if new_theme != theme_cur:
                     st.session_state["ui_theme"] = new_theme
                     st.rerun()
-                font_cur = st.session_state.get("ui_font_size", "Medium")
-                wkey = "ui_font_select_" + page_key
-                st.session_state.setdefault(wkey, font_cur)
-                new_font = st.selectbox(t("font_size"), ["Small", "Medium", "Large"], key=wkey)
-                if new_font != font_cur:
-                    st.session_state["ui_font_size"] = new_font
-                    st.rerun()
-                wkey = "ui_hc_" + page_key
-                st.session_state.setdefault(wkey, st.session_state.get("ui_high_contrast", False))
-                hc = st.checkbox(t("high_contrast"), key=wkey)
-                if hc != st.session_state.get("ui_high_contrast", False):
-                    st.session_state["ui_high_contrast"] = hc
-                    st.rerun()
-                wkey = "ui_lb_" + page_key
-                st.session_state.setdefault(wkey, st.session_state.get("ui_large_buttons", False))
-                lb = st.checkbox(t("large_buttons"), key=wkey)
-                if lb != st.session_state.get("ui_large_buttons", False):
-                    st.session_state["ui_large_buttons"] = lb
-                    st.rerun()
     st.markdown('<div class="header-rule"></div>', unsafe_allow_html=True)
-    render_copilot()
+    render_copilot(theme=st.session_state.get("ui_theme", "Light"))

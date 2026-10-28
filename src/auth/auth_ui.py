@@ -126,6 +126,7 @@ def logout():
             pass
     for key in (
         "user", "access_token", "profile", "chat_history", "last_prediction",
+        "copilot_history", "copilot_open",
         "auth_tokens", "_supabase_client", "_auth_tokens_applied",
         "heart_data", "kidney_data", "liver_data", "lung_data", "bc_data",
     ):
