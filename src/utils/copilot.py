@@ -37,13 +37,16 @@ def handle_send_message(prompt: str):
             "Please check `GEMINI_API_KEY` in `.streamlit/secrets.toml`."
         )
     else:
-        with st.spinner("Docsy is reviewing clinical knowledge..."):
-            reply = ask(model, history[:-1], prompt, context=context)
+        reply = ask(model, history[:-1], prompt, context=context)
 
     history.append({"role": "assistant", "content": reply})
 
 
-@st.dialog("Docsy — Clinical AI Copilot", width="large")
+def _close_docsy():
+    st.session_state["docsy_open"] = False
+
+
+@st.dialog("Docsy — Clinical AI Copilot", width="large", position="right", icon="✨", on_dismiss=_close_docsy)
 def show_docsy_dialog():
     """Native Streamlit dialog for Docsy AI copilot."""
     last_pred = st.session_state.get("last_prediction")
@@ -62,8 +65,7 @@ def show_docsy_dialog():
             st.caption("Ask questions about cardiovascular, renal, hepatic, or pulmonary screening, biomarkers, and guidelines.")
     with top_right:
         if st.button("＋ New", help="Start new conversation", use_container_width=True):
-            st.session_state["docsy_chat_history"] = []
-            st.rerun()
+            history.clear()
 
     # Empty State with Quick Clinical Prompts
     if not history:
@@ -107,4 +109,6 @@ def render_copilot(page_key: str = "home", **kwargs):
     btn_label = "✨ Explain Result" if last_pred else "✨ Docsy AI"
 
     if st.button(btn_label, key=f"docsy_hdr_btn_{page_key}", type=btn_type, help="Open Docsy Clinical Copilot"):
+        st.session_state["docsy_open"] = True
+    if st.session_state.get("docsy_open"):
         show_docsy_dialog()

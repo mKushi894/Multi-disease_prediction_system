@@ -21,11 +21,13 @@ def _sync_language():
 def render_header(page_key: str = "home"):
     _sync_language()
 
-    left, right = st.columns([6, 2])
+    left, right = st.columns([5, 3])
     with left:
         st.markdown('<div class="header-left-spacer"></div>', unsafe_allow_html=True)
     with right:
-        c_lang, c_settings = st.columns([2, 1])
+        c_copilot, c_lang, c_settings = st.columns([1.5, 1.3, 0.7])
+        with c_copilot:
+            render_copilot(page_key=page_key)
         with c_lang:
             current = st.session_state.get("ui_language_label", "English")
             wkey = "ui_language_select_" + page_key
@@ -51,4 +53,3 @@ def render_header(page_key: str = "home"):
                     st.session_state["ui_theme"] = new_theme
                     st.rerun()
     st.markdown('<div class="header-rule"></div>', unsafe_allow_html=True)
-    render_copilot(theme=st.session_state.get("ui_theme", "Light"))
