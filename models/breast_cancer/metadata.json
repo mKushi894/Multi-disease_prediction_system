@@ -1,0 +1,139 @@
+{
+    "disease": "Breast Cancer",
+    "model_name": "Support Vector Machine",
+    "accuracy": 0.9561,
+    "precision": 0.9744,
+    "recall": 0.9048,
+    "f1_score": 0.9383,
+    "roc_auc": 0.9828,
+    "confusion_matrix": [
+        [
+            71,
+            1
+        ],
+        [
+            4,
+            38
+        ]
+    ],
+    "feature_names": [
+        "mean radius",
+        "mean texture",
+        "mean perimeter",
+        "mean area",
+        "mean smoothness",
+        "mean compactness",
+        "mean concavity",
+        "mean concave points",
+        "mean symmetry",
+        "mean fractal dimension"
+    ],
+    "dataset_rows": 569,
+    "train_rows": 455,
+    "test_rows": 114,
+    "candidate_comparison": {
+        "Logistic Regression": {
+            "accuracy": 0.9298,
+            "precision": 0.8864,
+            "recall": 0.9286,
+            "f1_score": 0.907,
+            "roc_auc": 0.9841,
+            "confusion_matrix": [
+                [
+                    67,
+                    5
+                ],
+                [
+                    3,
+                    39
+                ]
+            ]
+        },
+        "Decision Tree": {
+            "accuracy": 0.9123,
+            "precision": 0.9211,
+            "recall": 0.8333,
+            "f1_score": 0.875,
+            "roc_auc": 0.9213,
+            "confusion_matrix": [
+                [
+                    69,
+                    3
+                ],
+                [
+                    7,
+                    35
+                ]
+            ]
+        },
+        "Random Forest": {
+            "accuracy": 0.9386,
+            "precision": 0.9268,
+            "recall": 0.9048,
+            "f1_score": 0.9157,
+            "roc_auc": 0.9835,
+            "confusion_matrix": [
+                [
+                    69,
+                    3
+                ],
+                [
+                    4,
+                    38
+                ]
+            ]
+        },
+        "Support Vector Machine": {
+            "accuracy": 0.9561,
+            "precision": 0.9744,
+            "recall": 0.9048,
+            "f1_score": 0.9383,
+            "roc_auc": 0.9828,
+            "confusion_matrix": [
+                [
+                    71,
+                    1
+                ],
+                [
+                    4,
+                    38
+                ]
+            ]
+        },
+        "K-Nearest Neighbors": {
+            "accuracy": 0.9474,
+            "precision": 0.9286,
+            "recall": 0.9286,
+            "f1_score": 0.9286,
+            "roc_auc": 0.9769,
+            "confusion_matrix": [
+                [
+                    69,
+                    3
+                ],
+                [
+                    3,
+                    39
+                ]
+            ]
+        },
+        "Gradient Boosting": {
+            "accuracy": 0.9474,
+            "precision": 0.95,
+            "recall": 0.9048,
+            "f1_score": 0.9268,
+            "roc_auc": 0.9792,
+            "confusion_matrix": [
+                [
+                    70,
+                    2
+                ],
+                [
+                    4,
+                    38
+                ]
+            ]
+        }
+    },
+    "last_trained": "2026-09-04 20:15:37"
+}

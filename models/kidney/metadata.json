@@ -1,0 +1,153 @@
+{
+    "disease": "Chronic Kidney Disease",
+    "model_name": "Random Forest",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+        [
+            30,
+            0
+        ],
+        [
+            0,
+            50
+        ]
+    ],
+    "feature_names": [
+        "age",
+        "bp",
+        "sg",
+        "al",
+        "su",
+        "rbc",
+        "pc",
+        "pcc",
+        "ba",
+        "bgr",
+        "bu",
+        "sc",
+        "sod",
+        "pot",
+        "hemo",
+        "pcv",
+        "wbcc",
+        "rbcc",
+        "htn",
+        "dm",
+        "cad",
+        "appet",
+        "pe",
+        "ane"
+    ],
+    "dataset_rows": 400,
+    "train_rows": 320,
+    "test_rows": 80,
+    "candidate_comparison": {
+        "Logistic Regression": {
+            "accuracy": 0.9875,
+            "precision": 1.0,
+            "recall": 0.98,
+            "f1_score": 0.9899,
+            "roc_auc": 1.0,
+            "confusion_matrix": [
+                [
+                    30,
+                    0
+                ],
+                [
+                    1,
+                    49
+                ]
+            ]
+        },
+        "Decision Tree": {
+            "accuracy": 0.9875,
+            "precision": 1.0,
+            "recall": 0.98,
+            "f1_score": 0.9899,
+            "roc_auc": 0.99,
+            "confusion_matrix": [
+                [
+                    30,
+                    0
+                ],
+                [
+                    1,
+                    49
+                ]
+            ]
+        },
+        "Random Forest": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "roc_auc": 1.0,
+            "confusion_matrix": [
+                [
+                    30,
+                    0
+                ],
+                [
+                    0,
+                    50
+                ]
+            ]
+        },
+        "Support Vector Machine": {
+            "accuracy": 0.9875,
+            "precision": 1.0,
+            "recall": 0.98,
+            "f1_score": 0.9899,
+            "roc_auc": 1.0,
+            "confusion_matrix": [
+                [
+                    30,
+                    0
+                ],
+                [
+                    1,
+                    49
+                ]
+            ]
+        },
+        "K-Nearest Neighbors": {
+            "accuracy": 0.975,
+            "precision": 1.0,
+            "recall": 0.96,
+            "f1_score": 0.9796,
+            "roc_auc": 0.99,
+            "confusion_matrix": [
+                [
+                    30,
+                    0
+                ],
+                [
+                    2,
+                    48
+                ]
+            ]
+        },
+        "Gradient Boosting": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "roc_auc": 1.0,
+            "confusion_matrix": [
+                [
+                    30,
+                    0
+                ],
+                [
+                    0,
+                    50
+                ]
+            ]
+        }
+    },
+    "last_trained": "2026-09-04 20:15:06"
+}

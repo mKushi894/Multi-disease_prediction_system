@@ -1,0 +1,139 @@
+{
+    "disease": "Liver Disease",
+    "model_name": "Logistic Regression",
+    "accuracy": 0.735,
+    "precision": 0.7407,
+    "recall": 0.9639,
+    "f1_score": 0.8377,
+    "roc_auc": 0.8306,
+    "confusion_matrix": [
+        [
+            6,
+            28
+        ],
+        [
+            3,
+            80
+        ]
+    ],
+    "feature_names": [
+        "Age",
+        "Gender",
+        "TB",
+        "DB",
+        "Alkphos",
+        "Sgpt",
+        "Sgot",
+        "TP",
+        "ALB",
+        "A_G_Ratio"
+    ],
+    "dataset_rows": 583,
+    "train_rows": 466,
+    "test_rows": 117,
+    "candidate_comparison": {
+        "Logistic Regression": {
+            "accuracy": 0.735,
+            "precision": 0.7407,
+            "recall": 0.9639,
+            "f1_score": 0.8377,
+            "roc_auc": 0.8306,
+            "confusion_matrix": [
+                [
+                    6,
+                    28
+                ],
+                [
+                    3,
+                    80
+                ]
+            ]
+        },
+        "Decision Tree": {
+            "accuracy": 0.6838,
+            "precision": 0.73,
+            "recall": 0.8795,
+            "f1_score": 0.7978,
+            "roc_auc": 0.7287,
+            "confusion_matrix": [
+                [
+                    7,
+                    27
+                ],
+                [
+                    10,
+                    73
+                ]
+            ]
+        },
+        "Random Forest": {
+            "accuracy": 0.7094,
+            "precision": 0.7333,
+            "recall": 0.9277,
+            "f1_score": 0.8191,
+            "roc_auc": 0.7746,
+            "confusion_matrix": [
+                [
+                    6,
+                    28
+                ],
+                [
+                    6,
+                    77
+                ]
+            ]
+        },
+        "Support Vector Machine": {
+            "accuracy": 0.7094,
+            "precision": 0.7094,
+            "recall": 1.0,
+            "f1_score": 0.83,
+            "roc_auc": 0.6708,
+            "confusion_matrix": [
+                [
+                    0,
+                    34
+                ],
+                [
+                    0,
+                    83
+                ]
+            ]
+        },
+        "K-Nearest Neighbors": {
+            "accuracy": 0.6838,
+            "precision": 0.7396,
+            "recall": 0.8554,
+            "f1_score": 0.7933,
+            "roc_auc": 0.7048,
+            "confusion_matrix": [
+                [
+                    9,
+                    25
+                ],
+                [
+                    12,
+                    71
+                ]
+            ]
+        },
+        "Gradient Boosting": {
+            "accuracy": 0.6838,
+            "precision": 0.73,
+            "recall": 0.8795,
+            "f1_score": 0.7978,
+            "roc_auc": 0.7491,
+            "confusion_matrix": [
+                [
+                    7,
+                    27
+                ],
+                [
+                    10,
+                    73
+                ]
+            ]
+        }
+    },
+    "last_trained": "2026-09-04 20:15:24"
+}
